@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Library Page</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"/>
+        <!-- ../ to link steyles and reset.css -->
+        <link rel="stylesheet" href="../styles.css"/>
+        <link rel="stylesheet" href="../reset.css"/> 
+        <link rel="stylesheet" href="libraryStyles.css"/>
+        <!-- Show library icon on tab -->
+        <link rel="icon" type="image/x-icon" href="../img/profile.png">
+    </head>
+    <body>
+        <div class="container">
+        <!-- Header -->
+            <div class="header">
+                <div class="headerTop">
+                    <div class="searchBar">
+                        <img src="../img/search.png" alt="">
+                        <input type="text" id="placeholder" placeholder="Search for project">
+                    </div>
+                    <div class="notices">
+                        <img class="bell-icon" src="../img/bell.png" alt="">                    
+                        <img class="profileIcon" src="../img/surf.png" alt="">
+                        <div class="username">Kathy Bailey Hines</div>
+                    </div>
+                </div>
+                <div class="headerBottom">
+                    <div class="greeting-area">
+                        <img src="../img/surf.png" alt="" class="largeProfileIcon">
+                        <div class="greeting">
+                            <p class="greetingText">Hi there, </p><br />
+                            <p class="greetingUsername">Kathy (@surfsup)</p>
+                        </div>
+                    </div>
+                    <div class="buttonMenu">
+                        <button class="btn add-book">Add Book</button>
+                        <button class="btn">Upload</button>
+                        <button class="btn">Share</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="title">
+                    <div class="title-item">
+                        <img src="../img/Dashboard.png" alt="">
+                        <div class="title-text">Dashboard</div>
+                    </div>
+                </div>
+                <div class="nav">
+                    <div class="navItem">
+                        <img src="../img/home.png" alt="">
+                        <!-- Link back to home page -->
+                        <a href="../index.html">Home</a> 
+                    </div>
+                    <!-- Change Profile to Library and tie anchor to library.html -->
+                    <div class="navItem"> 
+                        <img src="../img/library.png" alt="">
+                        <a href="library/library.html">Library</a>
+                    </div>
+                    <div class="navItem">
+                        <img src="../img/messages.png" alt="">
+                        <a href="#">Messages</a>
+                    </div>
+                    <div class="navItem">
+                        <img src="../img/history.png" alt="">
+                        <a href="#">History</a>
+                    </div>
+                    <div class="navItem">
+                        <img src="../img/tasks.png" alt="">
+                        <a href="#">Tasks</a>
+                    </div>
+                    <div class="navItem">
+                        <img src="../img/communities.png" alt="">
+                        <a href="#">Community</a>
+                    </div>
+                </div>
+                <div class="settings">
+                    <div class="settingsItem">
+                        <img src="../img/settings.png" alt="">
+                        <a href="#">Settings</a>
+                    </div>
+                    <div class="settingsItem">
+                        <img src="../img/support.png" alt="">
+                        <a href="#">Support</a>
+                    </div>
+                    <div class="settingsItem">
+                        <img src="../img/privacy.png" alt="">
+                        <a href="#">Privacy</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+                <!-- ***** -->
+                <div class="project-area">
+                    <h2>Your Books</h2>
+                    <div class="books projects">
+                    <!-- for project cards -->
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="modal-form">
+                        <h1 class="form-title"></h1>
+                        <form class="add-book-form">
+                            <div class="modal-input-field">
+                                <label for="book-title">Title: <label>
+                                <input 
+                                    type="text" name="book-title" id="book-title" class="modal-form-input"/>
+                            </div>
+                            <div class="modal-input-field">
+                                <label for="book-author">Author: </label>
+                                <input 
+                                    type="text" name="book-author" id="book-author" class="modal-form-input"/>
+                            </div>
+                            <div class="modal-input-field">
+                                <label for="book-pages">Pages: </label>
+                                <input 
+                                    type="number" min="0" name="book-pages" id="book-pages" class="modal-form-input"/>
+                            </div>
+                            <div class="modal-input-field">
+                                <span class="modal-read">Read?</span>
+                                <label class="contain">
+                                    <input 
+                                        type="checkbox" name="book-read" id="book-read" class="checkmark"/>
+                                </label>
+                            </div>
+                            <div class="submit-modal-form">
+                                <button type="submit" class="btn form-add-button"></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="main.js"></script>     
+    </body>
+</html>
